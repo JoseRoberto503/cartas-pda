@@ -1,1 +1,179 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f0f2f5;
+    padding:20px;
+}
+
+.contenedor{
+    max-width:1200px;
+    margin:auto;
+}
+
+h1{
+    text-align:center;
+    margin-bottom:30px;
+    color:#003366;
+}
+
+.formulario{
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0px 4px 15px rgba(0,0,0,0.1);
+    margin-bottom:30px;
+}
+
+.formulario h2{
+    margin-top:25px;
+    margin-bottom:15px;
+    color:#003366;
+    border-bottom:2px solid #003366;
+    padding-bottom:5px;
+}
+
+input,
+select,
+textarea{
+    width:100%;
+    padding:12px;
+    margin-bottom:15px;
+    border:1px solid #ccc;
+    border-radius:8px;
+    font-size:16px;
+}
+
+textarea{
+    min-height:120px;
+    resize:vertical;
+}
+
+.identificacion{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.identificacion span{
+    background:#003366;
+    color:white;
+    padding:12px;
+    border-radius:8px;
+    font-weight:bold;
+}
+
+.checkboxes{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    margin-bottom:20px;
+}
+
+.checkboxes label{
+    font-size:16px;
+}
+
+canvas{
+    width:100%;
+    height:200px;
+    border:2px dashed #003366;
+    border-radius:10px;
+    background:white;
+    margin-bottom:15px;
+}
+
+.botonesFirma{
+    display:flex;
+    gap:10px;
+}
+
+button{
+    width:100%;
+    padding:15px;
+    border:none;
+    border-radius:10px;
+    font-size:16px;
+    cursor:pointer;
+    margin-top:10px;
+    font-weight:bold;
+}
+
+.btnGenerar{
+    background:#003366;
+    color:white;
+}
+
+.btnPDF{
+    background:#28a745;
+    color:white;
+}
+
+.botonesFirma button{
+    background:#dc3545;
+    color:white;
+}
+
+button:hover{
+    opacity:0.9;
+}
+
+#documento{
+    margin-top:30px;
+}
+
+.carta{
+    background:white;
+    padding:50px;
+    border-radius:15px;
+    box-shadow:0px 4px 15px rgba(0,0,0,0.1);
+    min-height:1000px;
+}
+
+.carta h2{
+    text-align:center;
+    margin-bottom:40px;
+    color:#003366;
+}
+
+.carta p{
+    line-height:1.8;
+    font-size:18px;
+    text-align:justify;
+}
+
+.firmaFinal{
+    margin-top:80px;
+    text-align:center;
+}
+
+#imagenFirma{
+    max-width:300px;
+    border-bottom:1px solid black;
+}
+
+#nombreFirma{
+    margin-top:10px;
+    font-weight:bold;
+}
+
+@media(max-width:768px){
+
+    body{
+        padding:10px;
+    }
+
+    .formulario,
+    .carta{
+        padding:20px;
+    }
+
+    .carta p{
+        font-size:16px;
+    }
+
+}
