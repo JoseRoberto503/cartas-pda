@@ -1,1 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
 
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Entrega de PDA</title>
+
+<link rel="stylesheet" href="style.css">
+
+<script src="https://cdn.jsdelivr.net/npm/signature_pad@4.0.0/dist/signature_pad.umd.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+</head>
+
+<body>
+
+<div class="contenedor">
+
+<h1>ENTREGA DE PDA</h1>
+
+<div class="formulario">
+
+<h2>DATOS DEL EMPLEADO</h2>
+
+<input type="text" id="nombre" placeholder="Nombre completo">
+
+<input type="text" id="codigoEmpleado" placeholder="Código empleado">
+
+<select id="area">
+<option value="">Seleccione Área</option>
+
+<option>MATERIAL PESADO</option>
+<option>SURTIDOR</option>
+<option>PACKING</option>
+<option>DESPACHO MAYOREO</option>
+<option>DESPACHO TIENDAS</option>
+<option>UBICADORES</option>
+<option>SALA DE RECIBO</option>
+<option>CONTROL INVENTARIO</option>
+<option>AUDITORIA</option>
+<option>TRANSPORTE</option>
+
+</select>
+
+<h2>DATOS DEL PDA</h2>
+
+<div class="identificacion">
+
+<span>CDF-A</span>
+
+<input type="text" id="identificacion" placeholder="232">
+
+</div>
+
+<input type="text" value="ZEBRA" readonly>
+
+<select id="modelo">
+<option value="">Modelo</option>
+<option>MC9300</option>
+<option>MC9400</option>
+</select>
+
+<input type="number" id="serie" placeholder="Número de serie">
+
+<select id="estado">
+
+<option value="">Estado equipo</option>
+
+<option>EQUIPO NUEVO</option>
+<option>EQUIPO USADO</option>
+<option>EQUIPO REPARADO</option>
+<option>EQUIPO TEMPORAL</option>
+
+</select>
+
+<h2>ACCESORIOS ENTREGADOS</h2>
+
+<div class="checkboxes">
+
+<label><input type="checkbox" value="BATERIA"> BATERIA</label>
+
+<label><input type="checkbox" value="FUNDA (CARTUCHERA)"> FUNDA (CARTUCHERA)</label>
+
+<label><input type="checkbox" value="CUERDA DE VIDA"> CUERDA DE VIDA</label>
+
+<label><input type="checkbox" value="PROTECTOR DE HULE"> PROTECTOR DE HULE</label>
+
+</div>
+
+<h2>DATOS ENTREGA</h2>
+
+<input type="date" id="fecha">
+
+<input type="text" id="tecnico" placeholder="Soporte Técnico">
+
+<textarea id="observaciones" placeholder="Observaciones"></textarea>
+
+<h2>FIRMA EMPLEADO</h2>
+
+<canvas id="firma"></canvas>
+
+<div class="botonesFirma">
+
+<button onclick="limpiarFirma()">
+Limpiar Firma
+</button>
+
+</div>
+
+<button class="btnGenerar" onclick="generarCarta()">
+GENERAR CARTA
+</button>
+
+<button class="btnPDF" onclick="exportarPDF()">
+EXPORTAR PDF
+</button>
+
+</div>
+
+<div id="documento">
+
+<div class="carta">
+
+<h2>ACTA DE ENTREGA PDA</h2>
+
+<p id="contenidoCarta">
+Complete el formulario y presione generar carta.
+</p>
+
+<div class="firmaFinal">
+
+<img id="imagenFirma">
+
+<p id="nombreFirma"></p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
